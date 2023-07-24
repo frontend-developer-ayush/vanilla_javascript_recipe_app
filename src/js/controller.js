@@ -17,10 +17,10 @@ const controlRecipes = async function () {
     //1.  loading recipe
     await model.loadRecipe(id);
 
-    // 2) Rendering recipe
+    //2. Rendering recipe
     recipeView.render(model.state.recipe);
   } catch (err) {
-    alert(err);
+    recipeView.renderError();
   }
 };
 
@@ -29,6 +29,3 @@ const init = function () {
 };
 
 init();
-
-// window.addEventListener('hashchange', showRecepie);
-// window.addEventListener('load', showRecepie);
